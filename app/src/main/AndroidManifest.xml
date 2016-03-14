@@ -7,6 +7,10 @@
 	android:versionName="1.0.7">	    
     
     <uses-feature android:name="android.software.live_wallpaper" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     
     <supports-screens 
 	    android:smallScreens="false"
@@ -45,6 +49,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--MOBILECORE-->
+        <service
+            android:name="com.ironsource.mobilcore.MobileCoreReport"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.ironsource.mobilcore.InstallationTracker"
+            android:enabled="true" />
+        <activity
+            android:name="com.ironsource.mobilcore.InterstitialVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:keepScreenOn="true" />
         
     </application>
 </manifest>

@@ -11,7 +11,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
- 
+
+import com.ironsource.mobilcore.AdUnitEventListener;
+import com.ironsource.mobilcore.MobileCore;
+
 public class Splash extends Activity{
  
     //Make a button that will take the user to the live wallpaper picker
@@ -51,6 +54,8 @@ public class Splash extends Activity{
         super.onCreate(savedInstanceState);
         //activities need to refer to an xml layout file, where you have laid out all of the participating components. xml layout files are stored in res/layout. ours is called splash.xml
         setContentView(R.layout.splash);
+
+        initMobileCore();
  
         //this is optional, but you can add your own fonts for your text components for more variety :) if you do, make sure you put it in your assets folder. in this example i have a fonts subfolder inside my assets.
         
@@ -86,6 +91,26 @@ public class Splash extends Activity{
                 finish();
             }
         });
+    }
+
+    private void initMobileCore() {
+        MobileCore.setAdUnitEventListener(new AdUnitEventListener() {
+            @Override
+            public void onAdUnitEvent(MobileCore.AD_UNITS adUnit, EVENT_TYPE eventType, MobileCore.AD_UNIT_TRIGGER... trigger) {
+                if (adUnit == MobileCore.AD_UNITS.INTERSTITIAL && eventType == EVENT_TYPE.AD_UNIT_INIT_SUCCEEDED) {
+                    MobileCore.loadAdUnit(MobileCore.AD_UNITS.INTERSTITIAL, MobileCore.AD_UNIT_TRIGGER.MAIN_MENU);
+                } else if (adUnit == MobileCore.AD_UNITS.INTERSTITIAL && eventType == EVENT_TYPE.AD_UNIT_READY) {
+                    for (MobileCore.AD_UNIT_TRIGGER myTrigger : trigger) {
+                        if (myTrigger.equals(MobileCore.AD_UNIT_TRIGGER.MAIN_MENU)) {
+                            MobileCore.showInterstitial(Splash.this, MobileCore.AD_UNIT_TRIGGER.MAIN_MENU, null);
+                        }
+                    }
+                }
+            }
+        });
+
+        //Uncomment and add your ids and stuff
+//        MobileCore.init(activity, *DEVELOPER_HASH*, *LOG_TYPE*, *AD_UNITS*);
     }
  
     @Override
