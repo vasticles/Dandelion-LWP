@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="crownapps.dandelionlivewallpaper" 
+	android:versionCode="9" 
+	android:versionName="1.0.7">	    
+    
+    <uses-feature android:name="android.software.live_wallpaper" />
+    
+    <supports-screens 
+	    android:smallScreens="false"
+	    android:normalScreens="true"
+	    android:largeScreens="true" />
+    <application
+        android:label="@string/appName"
+        android:icon="@drawable/icon"
+        android:allowBackup="false">
+		
+        <service
+            android:label="@string/appName"   
+            android:name="com.sbg.lwc.SBLiveWallpaper"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data android:name="android.service.wallpaper" android:resource="@xml/lwp_resource" />
+        </service>
+        
+        <activity
+            android:label="Settings"
+            android:name="com.sbg.lwc.LiveWallpaperSettings"
+            android:theme="@android:style/Theme"
+            android:exported="true">
+        </activity>
+        
+        <!-- Register the activity in the manifest -->
+        <activity
+           android:name="com.sbg.lwc.Splash"
+           android:theme="@android:style/Theme.Black.NoTitleBar"
+           android:screenOrientation="portrait"
+           android:icon="@drawable/icon">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+</manifest>

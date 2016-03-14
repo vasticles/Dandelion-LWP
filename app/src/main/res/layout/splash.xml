@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- We need to use a layout to organize our elements. Liner Layout will do just fine. You can add a background if you want, or play around with orientation -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wallpaper_hdpi5"
+    android:orientation="vertical" >
+	
+    <!-- Now we start placing our xml elements. First is the title. Each element is given an ID so that it can be linked to the java component. -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Dandelion"
+        android:textColor="#F2F2F2"
+        android:textSize="25sp" />
+
+    <!-- Now we'll add the button. The text for the button is hardcoded for the sake of example, but you are advised to store all your texts in strings.xml -->
+    <Button
+        android:id="@+id/installWallpaper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:text="Set Live Wallpaper" />
+    
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:onClick="sendMessage"
+        android:text="Settings"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="more from Crown Apps"
+        android:textColor="#F2F2F2"
+        android:textSize="19sp" />
+    
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:onClick="sendMessage2"
+        android:text="Neon Bubble Live Wallpaper"
+        android:textSize="16sp" />
+    
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:onClick="sendMessage3"
+        android:text="Bubble Live Wallpaper"
+        android:textSize="16sp" />
+    
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:onClick="sendMessage4"
+        android:text="Deluxe Bubble Live Wallpaper"
+        android:textSize="16sp" />
+    
+
+    <!-- You can build various layouts using xml. We have only added 2 elements to our layout: a button and a textview. There are many more that you can use! You can also use the Graphical Layout tab to better visualize what the layout will look like -->
+    <!-- There are various element layout properties that help you shape and align each element. I can't start to explain them all, but you should experiment with them and learn for yourself :) -->
+
+</LinearLayout>

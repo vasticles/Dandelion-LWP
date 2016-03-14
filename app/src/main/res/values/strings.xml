@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">        
+    
+	<!-- LWC2 -->
+	
+	<!-- General settings -->
+	<string name="lwcVersion">2.6.1.0</string>
+    <string name="appName">Dandelion</string>
+    <string name="codeVersion">1</string>
+    <string name="nameVersion">1.0</string>
+	<item type="bool" name="isDemo">False</item>    
+	<string name="description">Beautiful dandelion live wallpaper</string>
+	<!-- LWC 2.6 -->
+    <string name="background">Background 1</string>
+    <!-- LWC 2.6 -->
+	
+    <!-- Items tab -->         
+	<integer name="itemCount">10</integer> 
+    <string name="actionStyle">None</string> <!-- Text, Image, Both, None -->  	
+    <item type="bool" name="disableInteraction">False</item>	      
+    <integer name="streakPeriod">0</integer>  
+	<item type="bool" name="associateActionItems">False</item>
+	<string name="spawnMode">Border</string>
+    <string-array name="actionText">
+
+    </string-array>
+	<string-array name="items">
+		<item>item1</item>
+		<item>item2</item>
+		<item>item3</item>
+		<item>item4</item>
+		<item>item5</item>
+		<item>item6</item>
+		<item>item7</item>
+		<item>item8</item>
+		<item>item9</item>
+
+    </string-array>
+   	<string-array name="gifs">
+
+    </string-array>
+	<string-array name="actionItems">
+
+    </string-array>   	
+	<string-array name="actionGifs">
+	    
+    </string-array>
+	
+	<!--  Fonts tab -->	
+	<string name="counterFont">airmole</string>
+	<integer name="counterFontSize">80</integer> <!-- (percentage value) relative to item height -->	
+	<color name="counterFontColor">#FFF2F2F2</color>
+	<string name="streakFont">airmole</string>
+	<integer name="streakFontSize">80</integer>	
+	<color name="streakFontColor">#FFF3F3F3</color>	
+	<string name="actionTextFont">airmole</string>
+	<integer name="actionTextFontSize">80</integer>	
+	<color name="actionTextFontColor">#FFF5F5F5</color>
+	
+	<!-- Item Properties tab --> 
+    <string-array name="speedNames"><item>Slow</item><item>Medium</item><item>Fast</item><item>Super Slow</item><item>No Movement</item>  
+    </string-array>
+    <string-array name="speedValues"><item>14,18,24</item><item>25,29,35</item><item>36,40,46</item><item>3,6,10</item><item>0</item>
+    </string-array>      	
+	<string-array name="directionNames"><item>Right</item><item>Left</item><item>Up</item>    
+    </string-array>
+    <string-array name="directionValues"><item>80,70,60,50,40</item><item>100,110,120,130,140</item><item>70,80,90,100,110</item>
+    </string-array>
+    <!-- LWC 2.6 -->
+    <string-array name="backgroundValues"><item>Blue</item><item>Grey</item><item>Orange</item><item>Pink</item><item>Light Blue</item></string-array>
+    <!-- LWC 2.6 -->          
+    <string name="scaleValues">100</string>
+    <string name="angleValues">0</string>
+    <string name="opacityValues">100</string>
+    <string name="rotationPeriodValues">0</string>
+    	
+    <!-- Interaction tab -->
+	<string name="durationValuesOfDying">100</string>		
+	<string name="directionValuesOfDying"></string>
+	<string name="speedValuesOfDying"></string>	
+    <item type="bool" name="fadeOutDying">False</item>
+    <string name="scaleTypeDying">Grow</string> <!-- Grow, Shrink, None -->
+    <string name="rotationValuesOfDying"></string> 
+    
+	<string name="durationValuesOfAction">500</string>	
+	<string name="directionValuesOfAction"></string>
+	<string name="speedValuesOfAction"></string>
+    <item type="bool" name="fadeOutAction">False</item>
+    <string name="scaleTypeAction">None</string> <!-- Grow, Shrink, None -->
+    <string name="rotationValuesOfAction"></string>
+    <item type="bool" name="useGifDurationForActionState">False</item>
+	 
+	<!-- ==== Wallpaper Settings ==== --> 
+	
+    <!-- Counter -->
+    <string-array name="counterNames">
+        <item>Show</item>
+        <item>Hide</item>
+    </string-array>
+    <string-array name="counterValues">
+        <item>show</item>
+        <item>hide</item>
+    </string-array>  
+    
+    <!-- FPS -->
+    <string-array name="pref_fps_keys">
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+		<item>80</item>
+        <item>90</item>
+		<item>100</item>       
+    </string-array>
+    
+    <!-- Numbr of Items -->
+    <string-array name="numOfItemsNames">          
+        <item>10%</item>
+        <item>25%</item>
+        <item>30%</item>        
+        <item>50%</item>
+        <item>60%</item>
+		<item>75%</item>
+        <item>90%</item>
+		<item>Default</item>     
+		<item>125%</item>
+        <item>150%</item>
+        <item>175%</item>        
+        <item>200%</item>
+        <item>225%</item>
+		<item>250%</item>
+        <item>275%</item>
+		<item>300%</item>   
+    </string-array>
+    <string-array name="numOfItemsValues">             
+        <item>10</item>
+        <item>25</item>
+        <item>30</item>        
+        <item>50</item>
+        <item>60</item>
+		<item>75</item>
+        <item>90</item>
+		<item>100</item>     
+		<item>125</item>
+        <item>150</item>
+        <item>175</item>        
+        <item>200</item>
+        <item>225</item>
+		<item>250</item>
+        <item>275</item>
+		<item>300</item>   
+    </string-array>
+    
+    <!-- Promotion links -->
+    <string-array name="promoLabels"><item>Neon Bubble Live Wallpaper</item><item>Bubble Live Wallpaper</item><item>Deluxe Bubble Live Wallpaper</item><item>Ghost Touch Live Wallpaper</item><item>Tech Bubble Live Wallpaper</item>        
+    </string-array>
+    <string-array name="promoUrls"><item>https://play.google.com/store/apps/details?id=crownapps.neonlivewallpaper</item><item>https://play.google.com/store/apps/details?id=crownapps.bubble</item><item>https://play.google.com/store/apps/details?id=crownapps.delux</item><item>https://play.google.com/store/apps/details?id=crownapps.ghosttouch</item><item>https://play.google.com/store/apps/details?id=crownapps.tech</item>        
+    </string-array>
+    
+</resources>

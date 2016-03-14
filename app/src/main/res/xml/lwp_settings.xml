@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="Settings"
+	android:key="settings">
+
+	<PreferenceCategory 
+	    android:title="Preferences"
+		android:key="main_preference_category">
+		
+		<Preference
+	    android:title="This is a free version"
+	    android:summary="Get the full version to enable settings such as item speed, direction and hit counters"
+	    android:key="demo_tag" />
+	    
+		<ListPreference 
+	    android:title="Number of Dandelions"
+	    android:key="numOfItemsMultiplier"
+	    android:summary="Increase or decrease the amount of dandelions"
+	    android:entries="@array/numOfItemsNames"
+	    android:entryValues="@array/numOfItemsValues" 
+	    android:defaultValue="100" />
+		
+		<CheckBoxPreference 
+	   	android:title="Disable Dandelions"
+		android:key="hide_items" 
+		android:summary="Dandelions are not displayed. Only the background image is visible. Hit Counter is also disabled" />
+		
+		<CheckBoxPreference 
+	   	android:title="Disable Interaction"
+	    android:key="disable_interaction" 
+	    android:summary="Touching moving dandelions has no effect" />
+		
+		<ListPreference
+        android:title="Choose Background" 
+        android:key="background_settings" 
+        android:summary="Change the background" 
+        android:entryValues="@array/backgroundValues" 
+        android:entries="@array/backgroundValues" 
+        android:defaultValue="@string/background"/>
+	            	
+	    <ListPreference
+	    android:key="speed_settings"
+	    android:title="Wind Speed"
+	    android:summary="Select movement speed of wind"
+	    android:entries="@array/speedNames"
+	    android:entryValues="@array/speedValues" />
+	            
+	    <CheckBoxPreference 
+	   	android:title="Show Hit Counter"
+	    android:key="counter_settings" 
+	    android:summary="Display a hit counter in the background" />
+	   
+		<ListPreference android:title="Frame Rate"
+	    android:key="pref_fps"
+	    android:summary="Increase for smoother animations or decrease for improved battery life"
+	    android:entries="@array/pref_fps_keys"
+	    android:entryValues="@array/pref_fps_keys" 
+	    android:defaultValue="50" />
+		
+	    <ListPreference
+	    android:key="direction_settings"
+	    android:title="Direction"
+	    android:summary="Select a direction that dandelions should move in"
+	    android:entries="@array/directionNames"
+	    android:entryValues="@array/directionValues" />
+	
+	</PreferenceCategory>
+	
+	<PreferenceCategory 
+	    android:title="Alignment and Scrolling"
+		android:key="pcNoScroll">
+		<CheckBoxPreference android:title="No Scroll Mode" android:key="pref_noScroll" android:defaultValue="false" android:summary="Check this if your wallpaper does not scroll and you want to align it to the center of the screen"/>
+	</PreferenceCategory>	
+	
+	<PreferenceCategory 
+    	android:title="Rate and Share" 
+    	android:key="pcPromo">
+	</PreferenceCategory>		
+</PreferenceScreen>
