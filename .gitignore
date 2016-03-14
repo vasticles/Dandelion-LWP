@@ -14,7 +14,7 @@ gen### Java template
 # Package Files #
 /app/build
 /.gradle
-*.jar
+#*.jar
 *.war
 *.ear
 
